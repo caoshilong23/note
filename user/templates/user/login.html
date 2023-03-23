@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(#ffffff00, #404ff199);
+            /* font-family: Roboto; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login {
+            background-color: #ffffff00;
+            width: 400px;
+            color: #f8f9fa;
+            padding: 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+            text-align: center;
+        }
+
+        .login input {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: none;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color: #f8f9fa;
+        }
+
+        .login input[type="text"],
+        .login input[type="password"] {
+            border: 2px solid #3498db;
+            width: 220px;
+        }
+
+        .login input[type="checkbox"] {
+            display: inline;
+        }
+
+        .login input[type="submit"] {
+            width: 150px;
+            border: 2px solid #2ecc71;
+            cursor: pointer;
+        }
+
+        .login input[type="text"]:focus,
+        .login input[type="password"]:focus {
+            border-color: #2ecc71;
+            width: 250px;
+            translate: 0.5s;
+        }
+
+        .login input[type="submit"]:hover {
+            background-color: #2ecc71;
+            translate: .5s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <form action="/user/login" method="post" class="login">
+        <input type="text" name="username" id="username" placeholder="请输入用户名" required>
+        <input type="password" name="password" id="password" placeholder="请输入密码" required>
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">记住用户名</label>
+        <input type="submit" value="登录">
+
+        <a href="/user/logon">注册</a>
+    </form>
+
+
+</body>
+
+</html>

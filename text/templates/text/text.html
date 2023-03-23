@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>笔记</title>
+</head>
+<body>
+
+<a href="/text/up">添加笔记</a>
+<a href="/index">回到首页</a>
+
+    <table border="1">
+        <tr>
+            <th>标题</th>
+            <th>内容</th>
+            <th>创建时间</th>
+            <th>修改时间</th>
+            <th>操作</th>
+        </tr>
+        {% for text in texts %}
+        <tr>
+            <td>{{ text.title }}</td>
+            <td>{{ text.content }}</td>
+            <td>{{ text.created_time }}</td>
+            <td>{{ text.updated_time }}</td>
+            <td>
+                <a href="/text/change?text_id={{ text.id }}">修改</a>
+                <a href="/text/delete?text_id={{ text.id }}">删除</a>
+            </td>
+        </tr>
+        {% empty %}
+        <p>
+            暂无笔记，是否<a href="/text/up">添加笔记</a>
+            <br>
+            <a href="/index">回到首页</a>
+        </p>
+        {% endfor %}
+    </table>
+
+
+
+
+</body>
+</html>

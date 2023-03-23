@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(#ffffff00, #404ff199);
+            /* font-family: Roboto; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logon {
+            background-color: #ffffff00;
+            width: 400px;
+            color: #f8f9fa;
+            padding: 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+            text-align: center;
+        }
+
+        .logon input {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: none;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color: #f8f9fa;
+        }
+
+        .logon input[type="text"],
+        .logon input[type="password"] {
+            border: 2px solid #3498db;
+            width: 220px;
+        }
+
+        .logon input[type="checkbox"] {
+            display: inline;
+        }
+
+        .logon input[type="submit"] {
+            width: 150px;
+            border: 2px solid #2ecc71;
+            cursor: pointer;
+        }
+
+        .logon input[type="text"]:focus,
+        .logon input[type="password"]:focus {
+            border-color: #2ecc71;
+            width: 250px;
+            translate: 0.5s;
+        }
+
+        .logon input[type="submit"]:hover {
+            background-color: #2ecc71;
+            translate: .5s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form action="/user/log_on" method="post" class="logon">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <input type="password" name="password" placeholder="请输入密码">
+        <input type="password" name="password_2" placeholder="请确认密码">
+
+        <input type="submit" name="注册">
+
+        <p>已有账号去<a href="/user/login">登录</a></p>
+    </form>
+
+
+
+</body>
+
+</html>
